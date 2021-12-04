@@ -1,0 +1,35 @@
+{
+  "name": "kafka",
+  "version": "1.0.0",
+  "main": "./build/index.js",
+  "license": "MIT",
+  "description": "Kafka Package for Daba platform",
+  "author": "King Etiosasere",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "clean": "del ./build/*",
+    "build": "yarn run clean && tsc",
+    "pub": "git add . && git commit -m %npm_config_gitMessage% && npm version patch && npm run build && npm publish",
+    "consume": "ts-node-dev --notify false src/example/consumer.ts",
+    "produce": "ts-node-dev --notify false src/example/producer.ts"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ip": "^1.1.5",
+    "kafkajs": "^1.15.0",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/ip": "^1.1.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.11",
+    "jest": "^27.4.3",
+    "jest-create-mock-instance": "^2.0.0",
+    "ts-jest": "^27.0.7",
+    "ts-node-dev": "^1.1.8"
+  }
+}

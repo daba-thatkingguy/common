@@ -5,7 +5,7 @@ import { onMessageReceived } from '../helpers/message.received';
 import { IResponse } from '../interfaces/IResponse';
 
 
-export class Consumer extends KafkaClient {
+export default class Consumer extends KafkaClient {
   private readonly consumer: KafkaJS.Consumer
   private readonly topics: string[]
 

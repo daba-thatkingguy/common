@@ -1,6 +1,6 @@
 {
   "name": "kafka",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./build/index.js",
   "license": "MIT",
   "description": "Kafka Package for Daba platform",
@@ -28,6 +28,7 @@
     "@types/ip": "^1.1.0",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.11",
+    "del-cli": "^4.0.1",
     "jest": "^27.4.3",
     "jest-create-mock-instance": "^2.0.0",
     "ts-jest": "^27.0.7",

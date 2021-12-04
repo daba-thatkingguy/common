@@ -2,7 +2,7 @@ import { randomBytes } from 'crypto';
 import * as KafkaJS from 'kafkajs';
 import { KafkaClient } from '../KafkaClient';
 
-export class Producer extends KafkaClient {
+export default class Producer extends KafkaClient {
   private readonly producer: KafkaJS.Producer
   private readonly topics: string[]
 

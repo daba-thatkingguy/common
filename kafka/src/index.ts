@@ -1,2 +1,2 @@
-export * from './consumer/Consumer';
-export * from './producer/Producer'
+export {default as Consumer} from './consumer/Consumer';
+export {default as Producer} from './producer/Producer'

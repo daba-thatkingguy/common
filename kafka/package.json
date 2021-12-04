@@ -1,6 +1,6 @@
 {
   "name": "kafka",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./build/index.js",
   "license": "MIT",
   "description": "Kafka Package for Daba platform",
@@ -13,7 +13,8 @@
     "test": "jest --config jestconfig.json",
     "clean": "del ./build/*",
     "build": "yarn run clean && tsc",
-    "pub": "git add . && git commit -m %npm_config_gitMessage% && npm version patch && npm run build && npm publish",
+    "pub": "func() { git add . && git commit -m \"$1\" && npm version patch && npm run build && npm publish; }; func",
+    "pubs": "git add . && git commit -m %npm_config_gitMessage% && npm version patch && npm run build && npm publish",
     "consume": "ts-node-dev --notify false src/example/consumer.ts",
     "produce": "ts-node-dev --notify false src/example/producer.ts"
   },
